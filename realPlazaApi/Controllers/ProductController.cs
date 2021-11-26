@@ -12,6 +12,7 @@ namespace realPlazaApi.Controllers
 {
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     [RoutePrefix("api/product")]
+    [Authorize]
     public class ProductController : ApiController
     {
         [Route("listProduct/{idShop}")]

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using realPlazaApi.Token;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
@@ -11,6 +12,9 @@ namespace realPlazaApi
         {
             // Configuración y habilitación de CORS
             config.EnableCors();
+
+            // Configuración de validación del token jwt
+            config.MessageHandlers.Add(new TokenValidationHandler());
 
             // Rutas de API web
             config.MapHttpAttributeRoutes();

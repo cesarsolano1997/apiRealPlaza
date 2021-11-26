@@ -8,6 +8,7 @@ namespace realPlazaApi.Controllers
 {
     [EnableCors(origins: "*", headers: "*", methods: "*")]
     [RoutePrefix("api/mall")]
+    [Authorize]
     public class MallController : ApiController
     {
         [Route("listMall")]
